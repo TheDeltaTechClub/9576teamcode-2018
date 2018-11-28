@@ -9,6 +9,8 @@ import java.util.Date;
 @Autonomous(name="basicAutonomous")
 public class basicAutonomous_CRATER_no_extendo_arm extends OpMode {
     DcMotor extendo_arm;
+    DcMotor leftDrive;
+    DcMotor rightDrive;
     long waitTime = 0;
     long nextWaitTime = 0;
     int phase = 0;
@@ -21,6 +23,10 @@ public class basicAutonomous_CRATER_no_extendo_arm extends OpMode {
     public void init() {
         extendo_arm = hardwareMap.dcMotor.get("extendo_arm");
         extendo_arm.setDirection(DcMotor.Direction.REVERSE);
+        leftDrive = hardwareMap.dcMotor.get("leftMotor");
+        rightDrive = hardwareMap.dcMotor.get("rightMotor");
+        leftDrive.setDirection(DcMotor.Direction.FORWARD);
+        rightDrive.setDirection(DcMotor.Direction.REVERSE);
         telemetry.addData("Status:", "Loaded variables and ready for loop");
         telemetry.update();
     }
@@ -34,7 +40,13 @@ public class basicAutonomous_CRATER_no_extendo_arm extends OpMode {
             if (timeMilli >= waitTime) {
                 switch (phase) {
                     case 0:
+                        leftDrive.setPower(1.0);
+                        rightDrive.setPower(1.0);
+                        nextWaitTime = 5000;
                         break;
+                    case 1:
+                        leftDrive.setPower(0.0);
+                        rightDrive.setPower(0.0);
                     default:
                         break;
                 }
