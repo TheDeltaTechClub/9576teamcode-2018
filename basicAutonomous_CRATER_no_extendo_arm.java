@@ -6,23 +6,20 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 import java.util.Date;
 
-@Autonomous(name="basicAutonomous")
+@Autonomous(name="basicAutonomous_C_NEA")
 public class basicAutonomous_CRATER_no_extendo_arm extends OpMode {
-    DcMotor extendo_arm;
     DcMotor leftDrive;
     DcMotor rightDrive;
     long waitTime = 0;
     long nextWaitTime = 0;
     int phase = 0;
 
-    public void basicAutonomous() {
+    public void basicAutonomous_CRATER_no_extendo_arm() {
 
     }
 
     @Override
     public void init() {
-        extendo_arm = hardwareMap.dcMotor.get("extendo_arm");
-        extendo_arm.setDirection(DcMotor.Direction.REVERSE);
         leftDrive = hardwareMap.dcMotor.get("leftMotor");
         rightDrive = hardwareMap.dcMotor.get("rightMotor");
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
