@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 import java.util.Date;
 
-@Autonomous(name="basicAutonomous_C_NEA")
+@Autonomous(name="AutoCrater-not-on-lander")
 public class basicAutonomous_CRATER_no_extendo_arm extends OpMode {
     DcMotor leftDrive;
     DcMotor rightDrive;

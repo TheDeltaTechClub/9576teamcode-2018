@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 import java.util.Date;
 
-@Autonomous(name="basicAutonomous_C")
+@Autonomous(name="AutoCrater")
 public class basicAutonomous_CRATER extends OpMode {
     DcMotor extendo_arm;
     DcMotor leftDrive;
@@ -42,17 +42,29 @@ public class basicAutonomous_CRATER extends OpMode {
                 switch (phase) {
                     case 0:
                         extendo_arm.setPower(1.0);
-                        nextWaitTime = 1200;
+                        nextWaitTime = 2000;
                         break;
                     case 1:
                         extendo_arm.setPower(0.0);
+                        leftDrive.setPower(-1.0);
+                        rightDrive.setPower(1.0);
+                        nextWaitTime = 1000;
+                        break;
+                    case 2:
+                        leftDrive.setPower(-1.0);
+                        rightDrive.setPower(-1.0);
+                        nextWaitTime = 1000;
+                        break;
+                    case 3:
+                        leftDrive.setPower(1.0);
+                        rightDrive.setPower(-1.0);
+                        nextWaitTime = 1000;
+                        break;
+                    case 4:
                         leftDrive.setPower(1.0);
                         rightDrive.setPower(1.0);
                         nextWaitTime = 5000;
                         break;
-                    case 2:
-                        leftDrive.setPower(0.0);
-                        rightDrive.setPower(0.0);
                     default:
                         break;
                 }
