@@ -41,22 +41,22 @@ public class basicAutonomous_CRATER_LEFT extends OpMode {
                 switch (phase) {
                     case 0:
                         extendo_arm.setPower(1.0);
-                        nextWaitTime = 2000;
+                        nextWaitTime = 3000;
                         break;
                     case 1:
                         extendo_arm.setPower(0.0);
-                        leftDrive.setPower(1.0);
-                        rightDrive.setPower(-1.0);
+                        leftDrive.setPower(0.5);
+                        rightDrive.setPower(-0.5);
                         nextWaitTime = 1000;
                         break;
                     case 2:
-                        leftDrive.setPower(-1.0);
-                        rightDrive.setPower(-1.0);
+                        leftDrive.setPower(0.5);
+                        rightDrive.setPower(0.5);
                         nextWaitTime = 1000;
                         break;
                     case 3:
-                        leftDrive.setPower(-1.0);
-                        rightDrive.setPower(1.0);
+                        leftDrive.setPower(-0.5);
+                        rightDrive.setPower(0.5);
                         nextWaitTime = 1000;
                         break;
                     case 4:
@@ -64,6 +64,9 @@ public class basicAutonomous_CRATER_LEFT extends OpMode {
                         rightDrive.setPower(1.0);
                         nextWaitTime = 5000;
                         break;
+                    case 5:
+                        leftDrive.setPower(0.0);
+                        rightDrive.setPower(0.0);
                     default:
                         break;
                 }

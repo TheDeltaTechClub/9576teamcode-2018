@@ -65,6 +65,9 @@ public class basicAutonomous_CRATER extends OpMode {
                         rightDrive.setPower(1.0);
                         nextWaitTime = 5000;
                         break;
+                    case 5:
+                        leftDrive.setPower(0.0);
+                        rightDrive.setPower(0.0);
                     default:
                         break;
                 }

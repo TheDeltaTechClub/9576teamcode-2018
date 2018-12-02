@@ -34,7 +34,7 @@ public class basicTeleop extends OpMode {
             float left = gamepad1.left_stick_y;
             float right = gamepad1.right_stick_y;
             boolean extendo_up = gamepad1.left_bumper;
-            boolean extendo_down = gamepad1.left_trigger>0;
+            boolean extendo_down = gamepad1.left_trigger>0.1;
 
             left = Range.clip(left, -1, 1);
             right = Range.clip(right, -1, 1);
@@ -45,6 +45,8 @@ public class basicTeleop extends OpMode {
                 extendo_arm.setPower(1.0);
             } else if (extendo_down&&!extendo_up) {
                 extendo_arm.setPower(-1.0);
+            } else {
+                extendo_arm.setPower(0.0);
             }
         }
 
