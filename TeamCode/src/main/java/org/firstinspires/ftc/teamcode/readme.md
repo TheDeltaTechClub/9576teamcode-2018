@@ -9,5 +9,7 @@ O basicTeleop (9576Teleop) - TeleOp that has all functions required for robot
 ## Controls for TeleOp
 
 O LeftTrigger+LeftBumper - extendo_arm (arm that lowers robot from lander)
+
 O Left Joystick - leftMotor (Drivetrain motor on left of bot)
+
 O Right Joystick - rightMotor (Drivetrain motor on right of bot)
