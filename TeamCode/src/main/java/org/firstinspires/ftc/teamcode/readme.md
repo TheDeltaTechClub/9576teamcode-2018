@@ -1,9 +1,9 @@
-## Autonymous
-basicAutonymous_BASE (AutoLanderOnly) - Autonymous when facing depot. Only lowers robot from lander.
+## Autonomous
+basicAutonomous_BASE (AutoLanderOnly) - Autonomous when facing depot. Only lowers robot from lander.
 
-basicAutonymous_CRATER_LEFT (AutoCrater) - Autonymous when facing crater. Left implies the direction of rotation, as it was the replacement for an archived version, basicAutonymous_CRATER (also known as AutoCrater).
+basicAutonomous_CRATER_LEFT (AutoCrater) - Autonomous when facing crater. Left implies the direction of rotation, as it was the replacement for an archived version, basicAutonomous_CRATER (also known as AutoCrater).
 
-basicAutonymous_CRATER_no_extendo_arm (AutoCrater-not-on-lander) - Autonymous when extendo_arm is unable to be hooked to lander. Drives straight into crater.
+basicAutonomous_CRATER_no_extendo_arm (AutoCrater-not-on-lander) - Autonomous when extendo_arm is unable to be hooked to lander. Drives straight into crater.
 
 ## TeleOp
 basicTeleop (9576Teleop) - TeleOp that has all functions required for robot
