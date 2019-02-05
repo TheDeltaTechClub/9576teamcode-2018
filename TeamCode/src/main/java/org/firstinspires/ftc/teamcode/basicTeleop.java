@@ -38,8 +38,8 @@ public class basicTeleop extends OpMode {
             float right = gamepad1.right_stick_y;
             boolean extendo_up = gamepad1.left_bumper;
             boolean extendo_down = gamepad1.left_trigger>0.1;
-            boolean flippyDo_up = gamepad1.left_bumper;
-            boolean flippyDo_down = gamepad1.left_trigger>0.1;
+            boolean flippyDo_up = gamepad1.right_bumper;
+            boolean flippyDo_down = gamepad1.right_trigger>0.1;
 
             left = Range.clip(left, -1, 1);
             right = Range.clip(right, -1, 1);
